@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Info Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      background-color: #ddd;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td, th {
+      padding: 10px;
+      border: 1px solid #000;
+    }
+    .nav-links {
+      margin: 10px 0;
+    }
+    .nav-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: purple;
+      font-weight: bold;
+    }
+    .info-table td {
+      border: none;
+    }
+    .info-table {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-links">
+      <a href="#info">Personal Information</a>
+    </div>
+
+    <div class="header">My Information</div>
+
+    <table class="info-table">
+      <tr>
+        <td style="width: 50%;">
+          <table border ="3">
+            <tr>
+              <th>S.No</th>
+              <th>Class</th>
+              <th>Marks</th>
+              <th>Year</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+          </table>
+        </td>
+        <td style="width: 50%;" id="info">
+          Name: abc<br>
+          Age: 21<br>
+          Address: xyz<br>
+          Roll No: 123<br>
+          Father's Name: xyz
+        </td>
+      </tr>
+    </table>
+
+    <div class="nav-links">
+      <a href="#">Back</a>
+      <a href="#">Next</a>
+    </div>
+  </div>
+</body>
+</html>
