@@ -1,0 +1,34 @@
+.nav-bar {
+    border-radius: 5px;
+    height: 50px;
+    width: auto;
+    padding: 15px;
+    background-color: #749004;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div {
+    color: crimson;
+}
+
+/* Common class for all paragraphs inside nav buttons */
+.nav-item {
+    margin: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for nav items */
+.nav-item:hover {
+    background-color: rgb(198, 254, 88);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Optional: Improve button appearance */
+button {
+    border: 2;
+    padding: 1;
+    background-color: crimson;
+}
