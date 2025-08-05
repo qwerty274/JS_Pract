@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Animated Traffic Light</title>
+<style>
+  @keyframes bgPulse {
+    0%, 100% { background-color: #f0f0f0; }
+    50% { background-color: #c0c0c0; }
+  }
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgPulse 4s ease-in-out infinite;
+    background-color: #f0f0f0;
+  }
+
+  .traffic-light {
+    background-color: black;
+    height: 300px;
+    width: 100px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  }
+
+  .light {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #4d4d4d;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  #red.on {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+  }
+
+  #yellow.on {
+    background-color: #ffff00;
+    box-shadow: 0 0 20px #ffff00;
+  }
+
+  #green.on {
+    background-color: #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+  }
+</style>
+</head>
+<body>
+
+<div class="traffic-light">
+  <div id="red" class="light"></div>
+  <div id="yellow" class="light"></div>
+  <div id="green" class="light"></div>
+</div>
+
+<script>
+  const redLight = document.getElementById('red');
+  const yellowLight = document.getElementById('yellow');
+  const greenLight = document.getElementById('green');
+
+  function lightsOff() {
+    redLight.classList.remove('on');
+    yellowLight.classList.remove('on');
+    greenLight.classList.remove('on');
+  }
+
+  const timings = {
+    red: 3000,
+    redYellow: 1500,
+    green: 3000,
+    yellow: 1500
+  };
+
+  function trafficLightCycle() {
+    lightsOff();
+    redLight.classList.add('on');
+    setTimeout(() => {
+      yellowLight.classList.add('on');
+      setTimeout(() => {
+        lightsOff();
+        greenLight.classList.add('on');
+        setTimeout(() => {
+          lightsOff();
+          yellowLight.classList.add('on');
+          setTimeout(() => {
+            trafficLightCycle();
+          }, timings.yellow);
+        }, timings.green);
+      }, timings.redYellow);
+    }, timings.red);
+  }
+
+  trafficLightCycle();
+</script>
+
+</body>
+</html>
