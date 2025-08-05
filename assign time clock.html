@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch Clock</title>
+  <link rel="stylesheet" href="time_clock.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Stopwatch Clock</h1>
+    <div class="controls">
+      <select>
+        <option>COLOR</option>
+      </select>
+      <select>
+        <option>1 Session</option>
+      </select>
+      <select>
+        <option>55min</option>
+      </select>
+      <select>
+        <option>Audio</option>
+      </select>
+    </div>
+    <div class="timer-box">
+      <span id="timer">00:00</span>
+    </div>
+  </div>
+
+  <script >function startCountdown(minutes, elementId) {
+  let totalSeconds = minutes * 60;
+  const display = document.getElementById(elementId);
+
+  function updateTimer() {
+    const min = Math.floor(totalSeconds / 60);
+    const sec = totalSeconds % 60;
+    display.textContent = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    if (totalSeconds > 0) {
+      totalSeconds--;
+    }
+  }
+
+  setInterval(updateTimer, 1000);
+}
+
+// Call the function
+startCountdown(2, "timer");  // countdown from 2 minutes
+
+</script>
+</body>
+</html>

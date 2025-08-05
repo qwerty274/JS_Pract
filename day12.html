@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div id="error"></div>
+<form onsubmit=" return validateForm()">
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <input type="text" id="pwd" placeholder="Enter your password"><br>
+    <button type="submit" id="btn" >submit</button>
+</form>
+<script>
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        let pwd = document.getElementById("pwd").value;
+        if( name =="" || pwd ==""){
+            document.getElementById("error").innerHTML = "Please fill in both fields";
+            document.getElementById("error").style.color="red";
+        }
+    return false;
+    }
+</script>
+ </body>
+ </html>

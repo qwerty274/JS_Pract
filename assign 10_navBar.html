@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign on nav</title>
+    <link  rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-bar" >
+        <p>MyApp</p>
+      
+        <form id="searchForm" onsubmit="handleSearch(event)">
+            <input type="text" id="searchInput" placeholder="Search In App..." />
+            <button type="submit" id="search"> Search</button>
+        </form>
+        <button id="signup" onclick="window.location.href='signup.html'">SignUp</button>
+        <buttonid="LogIn" onclick="window.location.href='login.html'">Log In</button>
+    </div>
+</body>
+<script>
+    
+function handleSearch(event) {
+    event.preventDefault();
+    if (document.getElementById('searchInput').value.trim() !== "") {
+        alert('Searching for: ' + document.getElementById('searchInput').value.trim());
+        // Put your actual search logic here
+    } else {
+        alert('Please enter a search term.');
+    }x
+}
+</script>
+</html>

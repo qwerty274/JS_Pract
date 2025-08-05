@@ -1,0 +1,108 @@
+/* Body and font */
+body {
+    background-color: pink;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for login/signup forms */
+.auth-container {
+    background-color: black;
+    padding: 40px 30px;
+    border-radius: 8px;
+    width: 320px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 24px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container input {
+    padding: 12px 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.auth-container input:focus {
+    outline: 2px solid pink;
+}
+
+.btn {
+    padding: 12px;
+    background-color: pink;
+    border: none;
+    border-radius: 4px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e60073; /* Darker pink */
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: pink;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    padding: 0;
+}
+
+.toggle-btn:hover {
+    text-decoration: underline;
+}
+
+/* Optional: keep nav-bar style you had previously */
+.nav-bar {
+    height: 150px;
+    width: auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Your existing navbar button styles */
+.nav-bar button {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#signup:hover,
+#LogIn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
